@@ -34,5 +34,13 @@ pipeline {
                                  fingerprint: true
             }
         }
+
+        stage('Deploy to Tomcat') {
+            steps {
+                bat '''
+                copy /Y "target\\student-feedback-portal.war" "C:\\Users\\chand\\Downloads\\apache-tomcat-10.1.62-windows-x64\\apache-tomcat-10.1.62\\webapps\\student-feedback-portal.war"
+                '''
+            }
+        }
     }
 }
