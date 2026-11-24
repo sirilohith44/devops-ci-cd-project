@@ -12,19 +12,19 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+                bat '"C:/Users/chand/Downloads/apache-maven-3.9.16-bin/apache-maven-3.9.16/bin/mvn.cmd" clean compile'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'mvn test'
+                bat '"C:/Users/chand/Downloads/apache-maven-3.9.16-bin/apache-maven-3.9.16/bin/mvn.cmd" test'
             }
         }
 
         stage('Package WAR') {
             steps {
-                bat 'mvn package'
+                bat '"C:/Users/chand/Downloads/apache-maven-3.9.16-bin/apache-maven-3.9.16/bin/mvn.cmd" package'
             }
         }
 
